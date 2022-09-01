@@ -7,7 +7,6 @@ public class AddressBookUc1 {
         long mobileNumber;
 
     }
-
     public void printContact() {
         Contact person = new Contact();
         person.firstName = "Sanket";
@@ -24,7 +23,6 @@ public class AddressBookUc1 {
                 + "Mobile Number    : " + person.mobileNumber + "\n" + "EmailId : " + person.emailId + "\n");
 
     }
-
     public static void main(String[] args) {
         AddressBookUc1 addressBookUc1 = new AddressBookUc1();
         addressBookUc1.printContact();

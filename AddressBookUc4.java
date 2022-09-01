@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class AddressBookUc3 {
+public class AddressBookUc4 {
     ContactDetails person = new ContactDetails();
     List<ContactDetails> contactDetailsList = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
@@ -41,6 +41,18 @@ public class AddressBookUc3 {
             editContact();
         }
     }
+    public void deleteContact() {
+        System.out.println("Enter The First nme of person To delete Contact");
+        String deleteName = sc.next();
+        if (deleteName.equalsIgnoreCase(person.getFirstName())) {
+            System.out.println("Deleted " + person.getFirstName() + " details");
+            person = null;
+
+        } else {
+            System.out.println("The Entred First name Is Not Match");
+            deleteContact();
+        }
+    }
     public void printContact() {
         for (int i = 0; i < contactDetailsList.size(); i++) {
             person = contactDetailsList.get(i);
@@ -52,3 +64,4 @@ public class AddressBookUc3 {
         }
     }
 }
+

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class AddressBookUc2 {
     static ContactDetails person = new ContactDetails();
-    static List<ContactDetails> contactDetailsList =new ArrayList<>();
+    static List<ContactDetails> contactDetailsList = new ArrayList<>();
 
 
     public static void addNewContact() {
@@ -31,21 +31,17 @@ public class AddressBookUc2 {
         contactDetailsList.add(person);
         printContact();
     }
-
-    public static void printContact(){
-        for (int i = 0; i < contactDetailsList.size(); i++){
+    public static void printContact() {
+        for (int i = 0; i < contactDetailsList.size(); i++) {
             person = contactDetailsList.get(i);
             System.out.println(" contact Details ");
-            System.out.println( "Name       : " +person.getFirstName() + " " + person.getLastName() + "\n"
-            + "Address      : " +person.getAddress() + "\n"  + "City        :"+person.getCity() + "\n" + "State     : " + person.getState() + "\n"
-                    +"ZipCode      : " +person.getZipCode() + "\n"  + "MobileNumber        :"+person.getMobileNumber() + "\n"
+            System.out.println("Name       : " + person.getFirstName() + " " + person.getLastName() + "\n"
+                    + "Address      : " + person.getAddress() + "\n" + "City        :" + person.getCity() + "\n" + "State     : " + person.getState() + "\n"
+                    + "ZipCode      : " + person.getZipCode() + "\n" + "MobileNumber        :" + person.getMobileNumber() + "\n"
                     + "EmailId     : " + person.getEmailId() + "\n");
         }
-
-
     }
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         addNewContact();
     }
 }
